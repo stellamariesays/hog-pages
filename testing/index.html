@@ -6,31 +6,57 @@
 <meta http-equiv="refresh" content="60">
 <title>HOG Trader — Testing</title>
 <style>
+  * { box-sizing: border-box; }
   body { font-family: monospace; background: #0d1117; color: #e6edf3; margin: 0; padding: 20px; }
   h1 { color: #fd7e14; border-bottom: 2px solid #fd7e14; padding-bottom: 8px; }
   .meta { color: #888; font-size: 0.85em; margin-bottom: 20px; }
-  table { width: 100%; border-collapse: collapse; margin-top: 16px; }
-  th { background: #161b22; color: #fd7e14; padding: 10px; text-align: left; }
-  td { padding: 10px; border-bottom: 1px solid #21262d; }
-  tr:hover { background: #161b22; }
-  .count { font-size: 2em; color: #fd7e14; font-weight: bold; }
+  .count { font-size: 1.8em; color: #fd7e14; font-weight: bold; margin-bottom: 20px; }
   a { color: #58a6ff; }
+  .card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 20px; margin-bottom: 20px;
+  }
+  .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .card-name { font-size: 1.3em; font-weight: bold; color: #e6edf3; }
+  .card-tier { font-size: 0.75em; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+  .tier-testing { background: #fd7e1433; color: #fd7e14; }
+  .tier-production { background: #28a74533; color: #28a745; }
+  .tier-research { background: #6c757d33; color: #6c757d; }
+  .card-desc { color: #888; font-size: 0.85em; margin-bottom: 16px; }
+  .stats-grid { display: grid; gap: 6px; }
+  .stat-row { display: flex; justify-content: space-between; align-items: baseline;
+               padding: 4px 0; border-bottom: 1px solid #21262d; }
+  .stat-label { color: #8b949e; font-size: 0.85em; }
+  .stat-val { text-align: right; }
+  .reason { color: #8b949e; font-size: 0.85em; max-width: 60%; text-align: right; }
+  .ts { color: #8b949e; font-size: 0.8em; }
 </style>
 </head>
 <body>
 <h1>🧪 HOG Trader — Testing</h1>
-<div class="meta">Updated: 2026-08-12 18:31 UTC &nbsp;|&nbsp; Auto-refreshes every 60s &nbsp;|&nbsp; <a href="../">← All dashboards</a></div>
+<div class="meta">
+  State: 2026-08-12 23:35:55 UTC &nbsp;|&nbsp; Generated: 2026-08-12 23:35 UTC &nbsp;|&nbsp;
+  Auto-refreshes every 60s &nbsp;|&nbsp; <a href="../">← All dashboards</a>
+</div>
 <div class="count">1 strategy</div>
-<table>
-  <tr><th>Name</th><th>Capital</th><th>Leverage</th><th>Schedule</th><th>Description</th></tr>
-  
-        <tr>
-            <td><strong>meanrev_5m</strong></td>
-            <td>$200</td>
-            <td>5x</td>
-            <td>every_5min</td>
-            <td>Intraday short mean reversion on BTC (iter341 FINAL) — 100% WR backtest, cross-validated BTC/ETH/SOL</td>
-        </tr>
-</table>
+
+<div class="card">
+  <div class="card-header">
+    <span class="card-name">meanrev_5m</span>
+    <span class="card-tier tier-testing">TESTING</span>
+  </div>
+  <div class="card-desc">Intraday short mean reversion on BTC (iter341 FINAL) — 100% WR backtest, cross-validated BTC/ETH/SOL</div>
+  <div class="stats-grid">
+    <div class="stat-row"><span class="stat-label">Direction</span><span class="stat-val"><span style="color:#58a6ff">FLAT</span></span></div>
+    <div class="stat-row"><span class="stat-label">Balance</span><span class="stat-val">$200.00</span></div>
+    <div class="stat-row"><span class="stat-label">Last Signal</span><span class="stat-val">-</span></div>
+    <div class="stat-row"><span class="stat-label">Reason</span><span class="stat-val reason">-</span></div>
+    <div class="stat-row"><span class="stat-label">Price</span><span class="stat-val">-</span></div>
+    <div class="stat-row"><span class="stat-label">Total Trades</span><span class="stat-val">0</span></div>
+    <div class="stat-row"><span class="stat-label">Total P&amp;L</span><span class="stat-val"><span style="color:#2ea043;font-weight:bold">+$0.00</span></span></div>
+    <div class="stat-row"><span class="stat-label">Last Tick</span><span class="stat-val ts">-</span></div>
+    <div class="stat-row"><span class="stat-label">Capital</span><span class="stat-val">$200 @ 5x</span></div>
+  </div>
+</div>
 </body>
 </html>
