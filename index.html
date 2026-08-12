@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOG Trader Dashboards</title>
+<style>
+  body { font-family: monospace; background: #0d1117; color: #e6edf3; margin: 0; padding: 40px; text-align: center; }
+  h1 { color: #e6edf3; }
+  .subtitle { color: #888; margin-bottom: 40px; }
+  .cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 30px 40px; text-decoration: none; color: inherit; min-width: 180px; transition: border-color 0.2s; }
+  .card:hover { border-color: #58a6ff; }
+  .card .icon { font-size: 2.5em; margin-bottom: 10px; }
+  .card h2 { margin: 0 0 6px 0; }
+  .card p { color: #888; margin: 0; font-size: 0.85em; }
+  .research { border-top: 3px solid #6c757d; }
+  .testing { border-top: 3px solid #fd7e14; }
+  .production { border-top: 3px solid #28a745; }
+</style>
+</head>
+<body>
+<h1>🐗 HOG Trader</h1>
+<div class="subtitle">Three-tier crypto trading system on Hyperliquid</div>
+<div class="cards">
+  <a href="research/" class="card research">
+    <div class="icon">🔬</div>
+    <h2>Research</h2>
+    <p>Signal development &amp; backtesting</p>
+  </a>
+  <a href="testing/" class="card testing">
+    <div class="icon">🧪</div>
+    <h2>Testing</h2>
+    <p>Live small-size validation</p>
+  </a>
+  <a href="production/" class="card production">
+    <div class="icon">🚀</div>
+    <h2>Production</h2>
+    <p>Live strategies, real capital</p>
+  </a>
+</div>
+</body>
+</html>
